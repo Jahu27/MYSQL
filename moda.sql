@@ -137,21 +137,28 @@ INSERT INTO Kreacja VALUES (NULL, 1, 12, "2023-11-20");
 INSERT INTO Kreacja VALUES (NULL, 2, 4, "2023-11-21");
 INSERT INTO Kreacja VALUES (NULL, 2, 6, "2023-11-21");
 
---1
-SELECT * From Stroj, Kreacja;
---2
-SELECT * FROM Stroj, Kreacja WHERE Stroj.idStroj = Kreacja.idStroj;
---3
-SELECT * FROM Stroj JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
---4
-SELECT * FROM Stroj Inner JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
---5
-SELECT * FROM Stroj CROSS JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
---6
-SELECT * FROM Stroj OUTER JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
+#--1
+#SELECT * From Stroj, Kreacja;
+#--2
+#SELECT * FROM Stroj, Kreacja WHERE Stroj.idStroj = Kreacja.idStroj;
+#--3
+#SELECT * FROM Stroj JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
+#--4
+#SELECT * FROM Stroj Inner JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
+#--5
+#SELECT * FROM Stroj CROSS JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
+#--6
+#SELECT * FROM Stroj OUTER JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
 
 
---7 didn't work 
+#7 LEFT JOIN
 
-SELECT * FROM Stroj FULL OUTER JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
 
+
+SELECT * FROM Stroj LEFT JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
+
+
+
+--left & right 
+
+SELECT FROM Stroj RIGHT JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
