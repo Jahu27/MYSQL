@@ -70,7 +70,7 @@ SELECT * FROM Stroj JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
 SELECT * FROM Stroj Inner JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
 --5
 SELECT * FROM Stroj CROSS JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
---6 only returm when there is elemnt which didn't are equal
+--6 didn't work
 SELECT * FROM Stroj OUTER JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
 
 
