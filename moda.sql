@@ -64,6 +64,8 @@ SELECT * From Stroj, Kreacja;
 SELECT * FROM Stroj, Kreacja WHERE Stroj.idStroj = Kreacja.idStroj;
 
 SELECT * FROM Stroj JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
+SELECT * FROM Stroj Inner JOIN Kreacja ON Stroj.idStroj = Kreacja.idStroj;
+
 
 
 
