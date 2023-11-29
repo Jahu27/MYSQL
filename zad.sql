@@ -5,11 +5,17 @@ SELECT  COUNT(creditcard.CreditCardID) FROM creditcard
 2. Policz ile kart wygasa w 2008 roku
 SELECT  ExpYear, COUNT(creditcard.CreditCardID) FROM creditcard WHERE ExpYear = 2008;
 3. Policz ile kard wygasa w 2008 roku w październiku
-SELECT ExpMonth, ExpYear, COUNT(creditcard.CreditCardID) FROM creditcard WHERE ExpYear = 2008 && ExpMonth = 10;
+SELECT ExpMonth, ExpYear, COUNT(creditcard.CreditCardID) 
+FROM creditcard 
+WHERE ExpYear = 2008 && ExpMonth = 10;
 4. Policz ilość kart Vista
-SELECT creditcard.CardType, COUNT(creditcard.CardType) from creditcard where CardType = "vista";
+SELECT creditcard.CardType, COUNT(creditcard.CardType) 
+from creditcard
+where CardType = "vista";
 5. Stwórz zostawienie ilości kart (po CardType) wygasających w styczniu
-SELECT  CardType, COUNT(creditcard.CreditCardID) as ilosc FROM creditcard WHERE ExpMonth =1  GROUP by 1 
+SELECT  CardType, COUNT(creditcard.CreditCardID) as ilosc 
+FROM creditcard 
+WHERE ExpMonth =1  GROUP by 1 
 ORDER by COUNT(CreditCardID) DESC;
 
 6. Wypisz 3 najliczniejsze miesiące kiedy wygasają karty Vista w 2007 roku.
@@ -24,3 +30,5 @@ LIMIT 1;
 
 8. Utwórz zestawienie typów kart zakładając, 
 że wygasają w miesiącach nieparzystych
+SELECT CardType, Count(*) from creditcard
+  WHERE MOD(ExpMonth,2) =1 Group By CardType;
