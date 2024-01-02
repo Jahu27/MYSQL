@@ -1,3 +1,4 @@
+INSERT into studenci(ImieStudenta,NazwiskoStudenta) VALUES("Angel","Kennedy");
 UPDATE studenci Set MiastoStudenta = (SELECT MiastoStudenta from studenci where ImieStudenta = "John" and NazwiskoStudenta = "kennedy"),
 studenci.KodPocztowyStudenta = (SELECT KodPocztowyStudenta from studenci where ImieStudenta = "John" and NazwiskoStudenta = "kennedy"),
 studenci.AdresStudenta = (SELECT AdresStudenta from studenci where ImieStudenta = "John" and NazwiskoStudenta = "kennedy"),
