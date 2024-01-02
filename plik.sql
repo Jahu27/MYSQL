@@ -6,6 +6,8 @@ studenci.StanZamStudenta = (SELECT StanZamStudenta from studenci where ImieStude
 PlecStudenta = "k", 
 studenci.KierunekStudiow = (SELECT KierunekStudiow from studenci where ImieStudenta = "John" and NazwiskoStudenta = "kennedy") 
 WHERE ImieStudenta="Angel" AND NazwiskoStudenta = "Kennedy";
+
+
 INSERT into studenci(IDStudenta,ImieStudenta,NazwiskoStudenta,AdresStudenta,MiastoStudenta,
                      StanZamStudenta,KodPocztowyStudenta,NumKierStudenta)
 SELECT 
