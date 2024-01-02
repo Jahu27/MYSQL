@@ -22,3 +22,11 @@ WHERE pracownicy.IDPracownika = 98021;
 
 
 
+
+
+Insert into klienci(ImieKlienta,NazwiskoKlienta,AdresKlienta,MiastoKlienta,StanZamKlienta,
+                   KodPocztowyKlienta,TelefonKlienta)
+SELECT ImieAgenta,NazwiskoAgenta,AdresAgenta,MiastoAgenta,StanZamAgenta,
+       KodPocztowyAgenta,TelefonAgenta FROM agenci where IDAgenta = 5;
+
+
